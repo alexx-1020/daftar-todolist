@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Daftar - To-Do Notebook</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="app.js" defer></script>
+</head>
+<body>
+  <main class="page">
+    <h1>Daftar</h1>
+    <p class="tagline">Write it down. Cross it out.</p>
+
+    <form id="add-form" class="add-bar">
+      <input id="new-todo" type="text" maxlength="100" autocomplete="off"
+             placeholder="What needs doing?" aria-label="New to-do">
+      <button type="submit">Add</button>
+    </form>
+
+    <ul id="todo-list" class="sheet"></ul>
+
+    <p id="counter" class="counter" aria-live="polite"></p>
+  </main>
+
+  <footer>Web Programming - Assignment 3 - Alex El achkar</footer>
+</body>
+</html>

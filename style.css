@@ -1,0 +1,183 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: #ebe5d6;
+  color: #1d2742;
+  font-family: Arial, sans-serif;
+  line-height: 1.5;
+}
+
+button,
+input {
+  font: inherit;
+}
+
+.page {
+  position: relative;
+  width: calc(100% - 32px);
+  max-width: 544px;
+  margin: 32px auto;
+  padding: 32px 20px 24px 48px;
+  background: #fffdf7;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+.page::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 32px;
+  width: 2px;
+  background: #e7a3a3;
+}
+
+h1 {
+  margin: 0;
+  font-family: Georgia, serif;
+  font-size: 36px;
+  line-height: 1.1;
+}
+
+.tagline {
+  margin: 4px 0 24px;
+  color: #5f6674;
+  font-style: italic;
+}
+
+.add-bar {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  gap: 8px;
+  margin-bottom: 20px;
+}
+
+.add-bar input {
+  padding: 10px 12px;
+  border: 1px solid #5f6674;
+  border-radius: 4px;
+  background: white;
+  color: #1d2742;
+}
+
+.add-bar input:invalid {
+  border-color: #c0392b;
+  box-shadow: 0 0 0 1px #c0392b;
+}
+
+.add-bar button {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  background: #2346a5;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.add-bar button:hover {
+  background: #1d2742;
+}
+
+.sheet {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  border-top: 1px solid #cddcf0;
+}
+
+.sheet:empty::before {
+  content: "Nothing written down yet. Add your first to-do above.";
+  display: block;
+  padding: 20px 0;
+  border-bottom: 1px solid #cddcf0;
+  color: #5f6674;
+  font-style: italic;
+}
+
+.row {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  align-items: center;
+  gap: 8px;
+  border-bottom: 1px solid #cddcf0;
+}
+
+.row label {
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr);
+  align-items: start;
+  gap: 12px;
+  padding: 10px 0;
+  cursor: pointer;
+}
+
+.row input {
+  width: 18px;
+  height: 18px;
+  margin: 3px 0 0;
+  accent-color: #2346a5;
+  cursor: pointer;
+}
+
+.row span {
+  overflow-wrap: anywhere;
+}
+
+.row.is-done span {
+  color: #5f6674;
+  text-decoration: line-through;
+  text-decoration-color: #c0392b;
+  text-decoration-thickness: 2px;
+}
+
+.remove {
+  padding: 6px 8px;
+  border: none;
+  background: none;
+  color: #5f6674;
+  font-size: 14px;
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.remove:hover {
+  color: #c0392b;
+}
+
+.counter {
+  margin: 12px 0 0;
+  color: #5f6674;
+  font-size: 14px;
+  text-align: right;
+}
+
+:focus-visible {
+  outline: 2px solid #2346a5;
+  outline-offset: 2px;
+}
+
+footer {
+  padding: 0 16px 32px;
+  color: #5f6674;
+  font-size: 13px;
+  text-align: center;
+}
+
+@media (min-width: 600px) {
+  .page {
+    margin-top: 64px;
+    padding: 40px 32px 32px 64px;
+  }
+
+  .page::before {
+    left: 44px;
+  }
+
+  h1 {
+    font-size: 44px;
+  }
+}
